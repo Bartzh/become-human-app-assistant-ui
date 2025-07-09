@@ -173,11 +173,7 @@ const UserActionBar: FC = () => {
       autohide="not-last"
       className="flex flex-col items-end col-start-1 row-start-2 mr-3 mt-2.5"
     >
-      <ActionBarPrimitive.Edit asChild>
-        <TooltipIconButton tooltip="Edit">
-          <PencilIcon />
-        </TooltipIconButton>
-      </ActionBarPrimitive.Edit>
+
     </ActionBarPrimitive.Root>
   );
 };
@@ -233,11 +229,7 @@ const AssistantActionBar: FC = () => {
           </MessagePrimitive.If>
         </TooltipIconButton>
       </ActionBarPrimitive.Copy>
-      <ActionBarPrimitive.Reload asChild>
-        <TooltipIconButton tooltip="Refresh">
-          <RefreshCwIcon />
-        </TooltipIconButton>
-      </ActionBarPrimitive.Reload>
+
     </ActionBarPrimitive.Root>
   );
 };
