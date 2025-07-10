@@ -32,7 +32,7 @@ export const Thread: FC = () => {
       }}
     >
       <ThreadPrimitive.Viewport className="flex h-full flex-col items-center overflow-y-scroll scroll-smooth bg-inherit px-4 pt-8">
-
+        <ThreadWelcome />
 
         <ThreadPrimitive.Messages
           components={{
@@ -76,7 +76,7 @@ const ThreadWelcome: FC = () => {
         <div className="flex w-full flex-grow flex-col items-center justify-center">
           <p className="mt-4 font-medium">How can I help you today?</p>
         </div>
-        <ThreadWelcomeSuggestions />
+
       </div>
     </ThreadPrimitive.Empty>
   );
