@@ -24,15 +24,11 @@ export function Assistant() {
   const [threadList, setThreadList] = useState<ExternalStoreThreadData<"regular">[]>([]);
   const [isRunning, setIsRunning] = useState<boolean>(false);
 
-  const [userName, setUserName] = useState<string>("");
-  let first_time_to_setUserName = true;
+  const [userName, setUserName] = useState<string>("Mx4Ydpv8NFTdcpuS2P3w");
 
   useEffect(() => {
-    if (!first_time_to_setUserName) {
+    if (userName !== "Mx4Ydpv8NFTdcpuS2P3w") {
       localStorage.setItem("user_name", userName);
-    }
-    else {
-      first_time_to_setUserName = false
     }
   }, [userName])
 
@@ -220,7 +216,7 @@ export function Assistant() {
         body: JSON.stringify({
           "message": message.content,
           "user_name": localStorage.getItem("user_name"), // 使用输入的用户名
-          "thread_id": "default_thread"
+          "thread_id": currentThreadId
         }),
       });
 
