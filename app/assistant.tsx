@@ -285,7 +285,7 @@ export function Assistant() {
                   ]);
                 }
               });
-              if (parsedChunk.isCompleted ?? true) {
+              if (!(parsedChunk.not_completed ?? false)) {
                 first_message = true;
               }
             }
